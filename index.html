@@ -93,8 +93,8 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 
   <script>
   var theElement = document.getElementById("dd");
-theElement.addEventListener("touchstart", touchStartHandler, false);
-theElement.addEventListener("touchend", touchEndHandler, false);
+document.addEventListener("touchstart", touchStartHandler, false);
+document.addEventListener("touchend", touchEndHandler, false);
 
 
 var touchesInAction = {};
