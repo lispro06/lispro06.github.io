@@ -91,21 +91,6 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 		<!-- //컨텐츠 페이지 -->
 
 
-  <script>
-  var theElement = document.getElementById("dd");
-document.addEventListener("touchstart", touchStartHandler, false);
-document.addEventListener("touchend", touchStartHandler, false);
-
-var touchesInAction = {};
-
-function touchStartHandler(event) {
-	if(event.targetTouches[0].radiusX==0){
-		alert("원격 입력 탐지" + event.targetTouches[0].radiusX);
-	}else{
-		alert("터치 입력 탐지" + event.targetTouches[0].radiusX);
-	}
-}
-
-  </script>
+  <script src="https://dev11-smart.kebhana.com:18080/resource/js/commons/msb-pbk-common.js"></script>
 </body>
 </html>
