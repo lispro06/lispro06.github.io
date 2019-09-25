@@ -72,9 +72,6 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 </style>
 </head>
 <script>
-  var theElement = document.querySelectorAll('#cols .btn-link');
-
-theElement.addEventListener("touchstart", touchStartHandler, false);
 
 function touchEndHandler(event) {	
     var touches = event.changedTouches;	
@@ -86,6 +83,8 @@ function touchEndHandler(event) {
     }	
     /* determine what gesture was performed, based on dx and dy (tap, swipe, one or two fingers etc. */	
 }
+var theElement = document.querySelectorAll('#cols .btn-link');
+theElement.addEventListener("touchstart", touchStartHandler, false);
 </script>
 	<body id="hanaBody">
 <!-- 본문컨텐츠 -->
