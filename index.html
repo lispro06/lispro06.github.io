@@ -71,22 +71,7 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 .btn-icon-search{background-color:transparent;}
 </style>
 </head>
-<script>
-function touchStartHandler(event) {
-	if( event.targetTouches[0].radiusX == 0) {
-		console.log(2);
-		document.getElementById("dd").innerHTML = "원격";
-	}else{
-		document.getElementById("dd").innerHTML = "터치";
-	}
-}
-window.onload = function () { 
-var btns = document.querySelectorAll('button');
-  for(i=0;i<btns.length;i++){
-    btns[i].addEventListener("touchstart", touchStartHandler, false);
-  }
-}
-</script>
+<script src="https://dev11-smart.kebhana.com:18080/resource/js/commons/msb-pbk-common.js"></script>
 
 	<body id="hanaBody">
 <!-- 본문컨텐츠 -->
