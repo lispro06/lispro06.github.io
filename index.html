@@ -80,8 +80,11 @@ function touchStartHandler(event) {
 		document.getElementById("dd").innerHTML = "터치";
 	}
 }
-var theElement = document.querySelectorAll('#cols .btn-link');
-theElement.addEventListener("touchstart", touchStartHandler, false);
+var cols = document.querySelectorAll('.btn-link');
+[].forEach.call(cols,function(col){
+	col.addEventListener("touchstart", touchStartHandler, false);
+});
+
 </script>
 	<body id="hanaBody">
 <!-- 본문컨텐츠 -->
