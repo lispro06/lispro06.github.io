@@ -74,9 +74,9 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 <script>
 function touchStartHandler(event) {
 	if( event.targetTouches[0].radiusX == 0) {
-		var hanaJQuery = new HanaJQuery(null, true);
-		hanaJQuery.ajaxSubmit("/reform/common/fds/fdsRmtControl.do", null, function(res, args){
-		});
+		document.getElementById("dd").innerHTML = "원격";
+	}else{
+		document.getElementById("dd").innerHTML = "터치";
 	}
 }
 
