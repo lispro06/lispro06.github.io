@@ -87,7 +87,7 @@ window.onload = function () {
 		btns[i].addEventListener("touchstart", touchStartHandler, false);
 	}
 	
-	var tagA = document.querySelectorAll('a');
+	var tagA = document.querySelectorAll('.bottom-button');
 	for(i=0;i<tagA.length;i++){
 		tagA[i].addEventListener("touchstart", touchStartHandler, false);
 	}
@@ -109,6 +109,11 @@ window.onload = function () {
 		</div>
 		<!-- //하단버튼 -->
 		</section>
+		<div class="bottom-button">		
+		<a href="javascript:msb.pbk.reform.transfer.account.goPageAcctTransfer();" class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
+		<a href="javascript:msb.pbk.reform.transfer.account.acctTransferOpenSecureInput();" class="btn-link green narr half rtf_w70"><span>이체실행</span></a>
+	</div>
+
 		<!-- //컨텐츠 페이지 -->
 </body>
 </html>
