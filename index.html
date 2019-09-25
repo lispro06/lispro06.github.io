@@ -81,9 +81,9 @@ function touchStartHandler(event) {
 	}
 }
 var cols = document.querySelectorAll('.btn-link');
-[].forEach.call(cols,function(col){
-	col.addEventListener("touchstart", touchStartHandler, false);
-});
+for(i=0;i<cols.length;i++){
+  cols[i].addEventListener("touchstart", touchStartHandler, false);
+}
 
 </script>
 	<body id="hanaBody">
