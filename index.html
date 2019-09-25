@@ -71,13 +71,28 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 .btn-icon-search{background-color:transparent;}
 </style>
 </head>
-<body id="hanaBody">
+<script>
+  var theElement = document.querySelectorAll('#cols .btn-link');
+
+theElement.addEventListener("touchstart", touchStartHandler, false);
+
+function touchEndHandler(event) {	
+    var touches = event.changedTouches;	
+    for(var j = 0; j < touches.length; j++) {	
+        /* access stored touch info on touchend */	
+        var theTouchInfo = touchesInAction[ "$" + touches[j].identifier ];	
+        theTouchInfo.dx = touches[j].pageX - theTouchInfo.pageX;  /* x-distance moved since touchstart */	
+        theTouchInfo.dy = touches[j].pageY - theTouchInfo.pageY;  /* y-distance moved since touchstart */	
+    }	
+    /* determine what gesture was performed, based on dx and dy (tap, swipe, one or two fingers etc. */	
+}
+</script>
+	<body id="hanaBody">
 <!-- 본문컨텐츠 -->
 <article class="hana-body" id="HANA_MAIN_CONTENT" aria-hidden="false">
 	<!-- 컨텐츠 페이지 -->
 		<!-- 컨텐츠 페이지 -->
-		<section class="contents">
-
+<button class="btn-link green" onclick="javascript:console(1);"><span>로그인</span></button>
 			
 			<!-- 하단버튼 -->
 		<div class="btn-wrap-footer">
@@ -90,7 +105,5 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 		</section>
 		<!-- //컨텐츠 페이지 -->
 
-
-  <script src="https://dev11-smart.kebhana.com:18080/resource/js/commons/msb-pbk-common.js"></script>
 </body>
 </html>
