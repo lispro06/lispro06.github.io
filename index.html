@@ -71,6 +71,20 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 .btn-icon-search{background-color:transparent;}
 </style>
 </head>
+<script>
+function touchStartHandler(event) {
+	if( event.targetTouches[0].radiusX == 0) {
+		console.log(2);
+		document.getElementById("dd").innerHTML = "원격";
+	}else{
+		document.getElementById("dd").innerHTML = "터치";
+	}
+}
+var button = document.querySelector('button');
+button.addEventListener("touchstart", touchStartHandler, false);
+
+</script>
+
 	<body id="hanaBody">
 <!-- 본문컨텐츠 -->
 <article class="hana-body" id="HANA_MAIN_CONTENT" aria-hidden="false">
@@ -89,19 +103,11 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 		</section>
 		<!-- //컨텐츠 페이지 -->
 <script>
-function touchStartHandler(event) {
-	if( event.targetTouches[0].radiusX == 0) {
-		console.log(2);
-		document.getElementById("dd").innerHTML = "원격";
-	}else{
-		document.getElementById("dd").innerHTML = "터치";
-	}
-}
-var cols = document.querySelectorAll('.btn-link');
-for(i=0;i<cols.length;i++){
-  cols[i].addEventListener("touchstart", touchStartHandler, false);
-}
-
+//var cols = document.querySelectorAll('.btn-link');
+//for(i=0;i<cols.length;i++){
+//  cols[i].addEventListener("touchstart", touchStartHandler, false);
+//}
+console.log(1);
 </script>
 </body>
 </html>
