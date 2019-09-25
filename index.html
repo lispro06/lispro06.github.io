@@ -99,7 +99,7 @@ window.onload = function () {
 <article class="hana-body" id="HANA_MAIN_CONTENT" aria-hidden="false">
 	<!-- 컨텐츠 페이지 -->
 		<!-- 컨텐츠 페이지 -->
-<button class="btn-link green" onclick="javascript:console.log(1);"><span>로그인</span></button>
+<button id="test" class="btn-link green" onclick="javascript:console.log(1);"><span>로그인</span></button>
 			
 			<!-- 하단버튼 -->
 		<div class="btn-wrap-footer">
@@ -110,8 +110,8 @@ window.onload = function () {
 		<!-- //하단버튼 -->
 		</section>
 		<div class="bottom-button">		
-		<a href="javascript:msb.pbk.reform.transfer.account.goPageAcctTransfer();" class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
-		<a href="javascript:msb.pbk.reform.transfer.account.acctTransferOpenSecureInput();" class="btn-link green narr half rtf_w70"><span>이체실행</span></a>
+		<a href="javascript:document.getElementById('test').innerHTML='add';" class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
+		<a href="javascript:document.getElementById('test').innerHTML='add2';" class="btn-link green narr half rtf_w70"><span>이체실행</span></a>
 	</div>
 
 		<!-- //컨텐츠 페이지 -->
