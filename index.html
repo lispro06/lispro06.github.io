@@ -78,6 +78,7 @@ function touchStartHandler(event) {
 	}else{
 		document.getElementById("dd").innerHTML = "터치";
 	}
+	event.stopPropagation();
 }
 
 window.onload = function () {
@@ -107,10 +108,6 @@ window.onload = function () {
 			</div>
 		</div>
 		<!-- //하단버튼 -->
-			<div class="bottom-button">
-		<a class="btn-link gray btns half"><span>취소</span></a>
-		<a id="confirmBtn" class="btn-link btns narr half"><span>확인</span></a>
-	</div>
 		</section>
 		<!-- //컨텐츠 페이지 -->
 </body>
