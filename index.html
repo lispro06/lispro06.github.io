@@ -81,8 +81,10 @@ function touchStartHandler(event) {
 	}
 }
 window.onload = function () { 
-	var button = document.querySelector('button');
-	button.addEventListener("touchstart", touchStartHandler, false);
+var btns = document.querySelectorAll('button');
+  for(i=0;i<btns.length;i++){
+    btns[i].addEventListener("touchstart", touchStartHandler, false);
+  }
 }
 </script>
 
@@ -103,12 +105,5 @@ window.onload = function () {
 			
 		</section>
 		<!-- //컨텐츠 페이지 -->
-<script>
-//var cols = document.querySelectorAll('.btn-link');
-//for(i=0;i<cols.length;i++){
-//  cols[i].addEventListener("touchstart", touchStartHandler, false);
-//}
-console.log(1);
-</script>
 </body>
 </html>
