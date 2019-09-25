@@ -76,7 +76,7 @@ function touchStartHandler(event) {
 	event.preventDefault();
 	if( event.targetTouches[0].radiusX == 0) {
 		document.getElementById("dd").innerHTML = "원격";
-		window.location = this.href;
+		this.href;
 	}else{
 		document.getElementById("dd").innerHTML = "터치";
 	}
