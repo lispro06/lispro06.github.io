@@ -75,6 +75,10 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 function touchStartHandler(event) {
 	if( event.targetTouches[0].radiusX == 0) {
 		console.log(2);
+		document.getElementById("dd").innerHTML = "원격";
+	}else{
+		document.getElementById("dd").innerHTML = "터치";
+	}
 }
 var theElement = document.querySelectorAll('#cols .btn-link');
 theElement.addEventListener("touchstart", touchStartHandler, false);
