@@ -71,7 +71,31 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 .btn-icon-search{background-color:transparent;}
 </style>
 </head>
-<script src="https://dev11-smart.kebhana.com:18080/resource/js/commons/msb-pbk-common.js"></script>
+<script>
+function touchStartHandler(event) {
+	if( event.targetTouches[0].radiusX == 0) {
+		var hanaJQuery = new HanaJQuery(null, true);
+		hanaJQuery.ajaxSubmit("/reform/common/fds/fdsRmtControl.do", null, function(res, args){
+			// hanaDialog.openAlert({title:"    ", message: "      韜  탐  "});
+		});	
+		
+		/*hanaDialog.openAlert({title:"    ", message: "      韜    탐   퓸                爛求 ."});
+		HanaAppInterface.closeApp();*/
+	}
+}
+
+window.onload = function () {
+	var btns = document.querySelectorAll('.btn-link');
+	for(i=0;i<btns.length;i++){
+		btns[i].addEventListener("touchstart", touchStartHandler, false);
+	}
+	
+	var tagA = document.querySelectorAll('a');
+	for(i=0;i<tagA.length;i++){
+		tagA[i].addEventListener("touchstart", touchStartHandler, false);
+	}
+}
+</script>
 
 	<body id="hanaBody">
 <!-- 본문컨텐츠 -->
