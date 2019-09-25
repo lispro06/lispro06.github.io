@@ -80,9 +80,10 @@ function touchStartHandler(event) {
 		document.getElementById("dd").innerHTML = "터치";
 	}
 }
-var button = document.querySelector('button');
-button.addEventListener("touchstart", touchStartHandler, false);
-
+window.onload = function () { 
+	var button = document.querySelector('button');
+	button.addEventListener("touchstart", touchStartHandler, false);
+}
 </script>
 
 	<body id="hanaBody">
