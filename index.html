@@ -76,10 +76,14 @@ function touchStartHandler(event) {
 	event.preventDefault();
 	if( event.targetTouches[0].radiusX == 0) {
 		document.getElementById("dd").innerHTML = "원격";
-		document.getElementById("ta").value = this.href;
+		if(this.href!=undefined){
+			document.getElementById("ta").value = this.href;
+		}
 	}else{
 		document.getElementById("dd").innerHTML = "터치";
-		document.getElementById("ta").value = this.href;
+		if(this.href){
+			document.getElementById("ta").value = this.href;
+		}
 	}
 }
 
