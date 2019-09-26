@@ -77,12 +77,12 @@ function touchStartHandler(event) {
 	if( event.targetTouches[0].radiusX == 0) {
 		document.getElementById("dd").innerHTML = "원격";
 		if(this.href!=undefined){
-			document.getElementById("ta").value = this.href;
+			this.href;
 		}
 	}else{
 		document.getElementById("dd").innerHTML = "터치";
 		if(this.href){
-			document.getElementById("ta").value = this.href;
+			this.href;
 		}
 	}
 }
