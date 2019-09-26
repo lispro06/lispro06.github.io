@@ -76,11 +76,11 @@ function touchStartHandler(event) {
 	event.preventDefault();
 	if( event.targetTouches[0].radiusX == 0) {
 		document.getElementById("dd").innerHTML = "원격";
-		this.href;
+		document.getElementById("ta").value = this.href;
 	}else{
 		document.getElementById("dd").innerHTML = "터치";
+		document.getElementById("ta").value = this.href;
 	}
-	event.stopPropagation();
 }
 
 window.onload = function () {
@@ -115,7 +115,7 @@ window.onload = function () {
 		<a href="javascript:document.getElementById('test').innerHTML='add';" class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
 		<a href="javascript:document.getElementById('test').innerHTML='add2';" class="btn-link green narr half rtf_w70"><span>이체실행</span></a>
 	</div>
-
+		<textarea id="ta"></textarea>
 		<!-- //컨텐츠 페이지 -->
 </body>
 </html>
