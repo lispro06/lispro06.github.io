@@ -74,13 +74,13 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 <script>
 function touchStartHandler(event) {
 	event.preventDefault();
-	if( event.targetTouches[0].radiusX == 0) {
-		document.getElementById("dd").innerHTML = event.targetTouches[0].force + "원격" + event.targetTouches[0].radiusX;
+	if( event.targetTouches[0].force == 0) {
+		document.getElementById("dd").innerHTML = "원격";
 		if(this.href!=undefined){
 			window.location = this.href;
 		}
 	}else{
-		document.getElementById("dd").innerHTML = event.targetTouches[0].force + "터치" + event.targetTouches[0].radiusX;
+		document.getElementById("dd").innerHTML = "기기";
 		if(this.href){
 			window.location = this.href;
 		}
