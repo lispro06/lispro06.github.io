@@ -75,12 +75,12 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 function touchStartHandler(event) {
 	event.preventDefault();
 	if( event.targetTouches[0].radiusX == 0) {
-		document.getElementById("dd").innerHTML = "원격" + event.targetTouches[0].radiusX;
+		document.getElementById("dd").innerHTML = event.targetTouches[0].force + "원격" + event.targetTouches[0].radiusX;
 		if(this.href!=undefined){
 			window.location = this.href;
 		}
 	}else{
-		document.getElementById("dd").innerHTML = "터치" + event.targetTouches[0].radiusX;
+		document.getElementById("dd").innerHTML = event.targetTouches[0].force + "터치" + event.targetTouches[0].radiusX;
 		if(this.href){
 			window.location = this.href;
 		}
@@ -106,7 +106,7 @@ window.onload = function () {
 <article class="hana-body" id="HANA_MAIN_CONTENT" aria-hidden="false">
 	<!-- 컨텐츠 페이지 -->
 		<!-- 컨텐츠 페이지 -->
-<button class="btn-link green" onclick="javascript:console.log(1);"><span id="test">로그인</span></button>
+<button class="btn-link green" onclick="javascript:console.log(1);" style="height:200px;width:200px"><span id="test">로그인</span></button>
 			
 			<!-- 하단버튼 -->
 		<div class="btn-wrap-footer">
