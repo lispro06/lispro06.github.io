@@ -89,7 +89,11 @@ function touchStartHandler(event) {
 			window.location = this.href;
 		}
 	}
-	console.log(event.targetTouches[0]);
+	$.ajax({
+	  url: "https://script.googleusercontent.com/macros/echo?user_content_key=ZsxhpH_3bZ6J-y_97NKrI4yTpEaezXxR8YddbAV69_utO48dYweHB8pbOLs0sA4BuhaA3sO1567sgoqltUrqf2bA68fr5F5bm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnFYJD7EMzOMBKJ7TZvYZ8yMFjdqK89UkoJLEIWoM1lTuMAmHpt2V9Cof3xKCIlm616V-rV9yhQ38&lib=MEG8Y80xNuynFJVTL6Xc6rt7kxc8_R_uc",
+	  data: {A:userAgent, B:event.targetTouches[0].radiusX},
+	  type: "POST"
+	});
 }
 
 window.onload = function () {
