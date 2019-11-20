@@ -92,7 +92,7 @@ function touchStartHandler(event) {
 	//window.location.replace("https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec?A="+userAgent+"&B="+event.targetTouches[0].radiusX);
 	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
-	  data: {A:userAgent, B:event.targetTouches[0].radiusX},
+	  data: {A:userAgent, B:event.targetTouches[0].radiusX, C:event.targetTouches[0].force},
 	  type: "POST"
 	});
 }
