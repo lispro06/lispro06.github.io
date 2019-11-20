@@ -72,15 +72,18 @@ button[class^="btn-icon"]{overflow:hidden;text-indent:-9999px;}
 </style>
 </head>
 <script>
+var userAgent=navigator.userAgent.toLowerCase();
+
 function touchStartHandler(event) {
 	event.preventDefault();
+	document.getElementById("dd").innerHTML = userAgent;
 	if( event.targetTouches[0].radiusX == 0 && event.targetTouches[0].force == 1) {
-		document.getElementById("dd").innerHTML = event.targetTouches[0].radiusX + "원격" + event.targetTouches[0].force;
+		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "원격" + event.targetTouches[0].force;
 		if(this.href!=undefined){
 			window.location = this.href;
 		}
 	}else{
-		document.getElementById("dd").innerHTML = event.targetTouches[0].radiusX + "기기" + event.targetTouches[0].force;
+		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "기기" + event.targetTouches[0].force;
 		if(this.href){
 			window.location = this.href;
 		}
@@ -117,8 +120,8 @@ window.onload = function () {
 		<!-- //하단버튼 -->
 		</section>
 		<div class="bottom-button">		
-		<a class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
-		<aclass="btn-link green narr half rtf_w70"><span>이체실행</span></a>
+		<!--a class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
+		<a class="btn-link green narr half rtf_w70"><span>이체실행</span></a-->
 	</div>
 		<textarea id="ta"></textarea>
 		<!-- //컨텐츠 페이지 -->
