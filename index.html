@@ -62,7 +62,7 @@ div[class^="btn-wrap"]{display:block;}
 .bg-area{background-color:#f7f7f7;}
 .noscroll{overflow: hidden; height:inherit;}
 article[class*="body"] *:focus, article[class^="popup"]:focus, article[class^="popup"] *:focus{outline:none;}
-.btn-wrap-footer .btns{flex:1;-webkit-flex:1;height:60px;background-color:#999;color:#fff;}
+.btn-wrap-footer .btns{flex:1;-webkit-flex:1;height:160px;background-color:#999;color:#fff;}
 .btn-wrap-footer .btns.primary{background-color:#10a6b7;}
 .btn-wrap-footer .btns:disabled{background-color:#e6e6e6;color:#888;}
 .btn-wrap-footer .btns.basis{flex-basis:33%;-webkit-flex-basis:33%;}
@@ -78,12 +78,12 @@ function touchStartHandler(event) {
 	event.preventDefault();
 	document.getElementById("dd").innerHTML = userAgent;
 	if( event.targetTouches[0].radiusX == 0 && event.targetTouches[0].force == 1) {
-		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "원격" + event.targetTouches[0].force;
+		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + " 원격 " + event.targetTouches[0].force;
 		if(this.href!=undefined){
 			window.location = this.href;
 		}
 	}else{
-		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "기기" + event.targetTouches[0].force;
+		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + " 기기 " + event.targetTouches[0].force;
 		if(this.href){
 			window.location = this.href;
 		}
@@ -109,12 +109,12 @@ window.onload = function () {
 <article class="hana-body" id="HANA_MAIN_CONTENT" aria-hidden="false">
 	<!-- 컨텐츠 페이지 -->
 		<!-- 컨텐츠 페이지 -->
-<button class="btn-link green" onclick="javascript:console.log(1);" style="height:200px;width:200px"><span id="test">로그인</span></button>
+<button class="btn-link green" onclick="javascript:console.log(1);" style="height:200px;width:200px"><span id="test">사용하는 단말기 정보와 터치 압력과 면적을 전송하는데 동의합니다.</span></button>
 			
 			<!-- 하단버튼 -->
 		<div class="btn-wrap-footer">
 			<div class="btn-area">
-				<button id="dd" onclick="javascript:console.log(1)" type="button" class="btns primary">확인</button>
+				<button id="dd" type="button" class="btns primary">확인</button>
 			</div>
 		</div>
 		<!-- //하단버튼 -->
@@ -122,8 +122,7 @@ window.onload = function () {
 		<div class="bottom-button">		
 		<!--a class="btn-link rtf_gray narr half rtf_w30"><span>취소</span></a>
 		<a class="btn-link green narr half rtf_w70"><span>이체실행</span></a-->
-	</div>
-		<textarea id="ta"></textarea>
+		</div>
 		<!-- //컨텐츠 페이지 -->
 </body>
 </html>
