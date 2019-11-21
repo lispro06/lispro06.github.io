@@ -96,6 +96,7 @@ function touchStartHandler(event) {
 	  type: "POST"
 	});
 	document.getElementById("test").innerHTML = "감사합니다(계속전송)";
+	console.log(event.targetTouches[0]);
 }
 
 window.onload = function () {
