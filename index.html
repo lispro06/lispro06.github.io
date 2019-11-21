@@ -79,16 +79,15 @@ function touchStartHandler(event) {
 	event.preventDefault();
 	document.getElementById("dd").innerHTML = userAgent;
 	if( event.targetTouches[0].radiusX == 0 && event.targetTouches[0].force == 1) {
-		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force;
 		if(this.href!=undefined){
 			window.location = this.href;
 		}
 	}else{
-		document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force;
 		if(this.href){
 			window.location = this.href;
 		}
 	}
+	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force;
 	//window.location.replace("https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec?A="+userAgent+"&B="+event.targetTouches[0].radiusX);
 	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
@@ -96,7 +95,7 @@ function touchStartHandler(event) {
 	  type: "POST"
 	});
 	document.getElementById("test").innerHTML = "감사합니다(계속전송)";
-	console.log(event.targetTouches[0]);
+	console.log(event);
 }
 
 window.onload = function () {
