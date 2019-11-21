@@ -90,6 +90,7 @@ function touchStartHandler(event) {
 	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " ";
 	event.targetTouches[0].target.disabled = true;
 	event.targetTouches[0].target.innerText = "감사합니다";
+	event.targetTouches[0].target.removeEventListener("touchstart", touchStartHandler, false);
 	//window.location.replace("https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec?A="+userAgent+"&B="+event.targetTouches[0].radiusX);
 	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
