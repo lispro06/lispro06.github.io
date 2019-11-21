@@ -89,13 +89,13 @@ function touchStartHandler(event) {
 	}
 	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " ";
 	event.targetTouches[0].target.disabled = true;
+	event.targetTouches[0].target.innerText = "감사합니다";
 	//window.location.replace("https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec?A="+userAgent+"&B="+event.targetTouches[0].radiusX);
 	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
 	  data: {A:userAgent, B:event.targetTouches[0].radiusX, C:event.targetTouches[0].force},
 	  type: "POST"
 	});
-	document.getElementById("test").innerHTML = "감사합니다(계속전송)";
 	console.log(event);
 }
 
@@ -127,9 +127,7 @@ window.onload = function () {
 	<br>
 		<!-- 컨텐츠 페이지 -->
 <button class="btn-link green" style="height:100px;width:100px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
-	<br>
 <button class="btn-link green" style="height:100px;width:100px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
-	<br>
 <button class="btn-link green" style="height:100px;width:100px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
 			
 			<!-- 하단버튼 -->
