@@ -87,7 +87,8 @@ function touchStartHandler(event) {
 			window.location = this.href;
 		}
 	}
-	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " " + event.targetTouches[0].rotationAngle;
+	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " ";
+	event.targetTouches[0].target.disabled = true;
 	//window.location.replace("https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec?A="+userAgent+"&B="+event.targetTouches[0].radiusX);
 	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
@@ -125,7 +126,11 @@ window.onload = function () {
 	<a href="http://mn.kbs.co.kr/mobile/news/view.do?ncd=4324182">http://mn.kbs.co.kr/mobile/news/view.do?ncd=4324182</a>
 	<br>
 		<!-- 컨텐츠 페이지 -->
-<button class="btn-link green" style="height:200px;width:200px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
+<button class="btn-link green" style="height:100px;width:100px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
+	<br>
+<button class="btn-link green" style="height:100px;width:100px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
+	<br>
+<button class="btn-link green" style="height:100px;width:100px"><span id="test">사용하는 단말기 정보와 터치 속성을 전송하는데 동의합니다.(터치)</span></button>
 			
 			<!-- 하단버튼 -->
 		<div class="btn-wrap-footer">
