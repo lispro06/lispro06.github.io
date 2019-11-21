@@ -87,7 +87,7 @@ function touchStartHandler(event) {
 			window.location = this.href;
 		}
 	}
-	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force;
+	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " " + event.targetTouches[0].rotationAngle;
 	//window.location.replace("https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec?A="+userAgent+"&B="+event.targetTouches[0].radiusX);
 	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
