@@ -87,7 +87,7 @@ function touchStartHandler(event) {
 			window.location = this.href;
 		}
 	}
-	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " ";
+	document.getElementById("dd").innerHTML = document.getElementById("dd").innerHTML + "\n" + event.targetTouches[0].radiusX + "  " + event.targetTouches[0].force + " " + event.targetTouches[0].touchType;
 	event.targetTouches[0].target.disabled = true;
 	event.targetTouches[0].target.innerText = "감사합니다";
 	event.targetTouches[0].target.removeEventListener("touchstart", touchStartHandler, false);
