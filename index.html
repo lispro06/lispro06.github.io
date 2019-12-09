@@ -92,11 +92,11 @@ function touchStartHandler(event) {
 	event.targetTouches[0].target.innerText = "감사합니다";
 	event.targetTouches[0].target.removeEventListener("touchstart", touchStartHandler, false);
 	
-	/*$.ajax({
+	$.ajax({
 	  url: "https://script.google.com/macros/s/AKfycbz2-zd3LMk4jQwqeCewZo-2cxlGejhdb2pK_3BZhVsEvb8_pkw/exec",
-	  data: {UA:userAgent, RX:event.targetTouches[0].radiusX, FC:event.targetTouches[0].force, RA:event.targetTouches[0].rotationAngle},
+	  data: {UA:userAgent, RX:event.targetTouches[0].radiusX, FC:event.targetTouches[0].force, RA:event.targetTouches[0].rotationAngle, TT:event.targetTouches[0].touchType},
 	  type: "POST"
-	});*/
+	});
 	console.log(event);
 }
 
